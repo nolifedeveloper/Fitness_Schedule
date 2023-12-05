@@ -98,6 +98,8 @@ public class FitnessScheduler : MonoBehaviour
     {
         currentYear += delta;
         YEAR_TEXT.text = currentYear.ToString();
+        lastSavedDate.lastYear = currentYear;
+        SetData(lastSavedDate, settingsDataPath);
     }
 
     public void ChangeMonth(int delta)
@@ -121,7 +123,9 @@ public class FitnessScheduler : MonoBehaviour
         }
 
         MONTH_TEXT.text = allMonths[currentMonthIndex].monthName.ToUpper();
+        lastSavedDate.lastMonth = currentMonthIndex;
 
+        SetData(lastSavedDate, settingsDataPath);
         InitializeMonth();
     }
 
@@ -195,11 +199,6 @@ public class FitnessScheduler : MonoBehaviour
         {
             File.WriteAllText(targetPath, JsonConvert.SerializeObject(obj, Formatting.Indented));
         }
-    }
-
-    private void OnApplicationQuit()
-    {
-        SetData(lastSavedDate, settingsDataPath);
     }
 
     private WorkoutData ReturnSavedDay(WorkoutData checkedData)
