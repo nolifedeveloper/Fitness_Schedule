@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -44,7 +45,9 @@ public class DayHolder : MonoBehaviour, IPointerClickHandler
 
     private void ChangeDayStatus(ScrollType type)
     {
-        if(type == ScrollType.Change)
+        FitnessScheduler.instance.RemoveWorkoutData(this.data);
+
+        if (type == ScrollType.Change)
         {
             int workoutType = (int)this.data.workoutType + 1;
             
@@ -57,6 +60,8 @@ public class DayHolder : MonoBehaviour, IPointerClickHandler
         }
 
         dayImage.sprite = FitnessScheduler.instance.ReturnWorkoutSprite(this.data.workoutType);
+
+        FitnessScheduler.instance.AddWorkoutData(this.data);
     }
 }
 
