@@ -643,7 +643,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -156, y: 0}
-  m_SizeDelta: {x: 211, y: 50}
+  m_SizeDelta: {x: 255, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &789919484
 MonoBehaviour:
@@ -667,8 +667,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: JANUARY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d91fe190996719849a39cdf5598fb9d0, type: 2}
-  m_sharedMaterial: {fileID: -1957553463324673716, guid: d91fe190996719849a39cdf5598fb9d0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 05b12b02207dfd549873f444ac0b29d2, type: 2}
+  m_sharedMaterial: {fileID: 7871293816595183443, guid: 05b12b02207dfd549873f444ac0b29d2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -692,13 +692,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 48.7
+  m_fontSizeBase: 48.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -900,8 +900,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 2024
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d91fe190996719849a39cdf5598fb9d0, type: 2}
-  m_sharedMaterial: {fileID: -1957553463324673716, guid: d91fe190996719849a39cdf5598fb9d0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 05b12b02207dfd549873f444ac0b29d2, type: 2}
+  m_sharedMaterial: {fileID: 7871293816595183443, guid: 05b12b02207dfd549873f444ac0b29d2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1019,10 +1019,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b498e3ff6ff9b341895a5f171b8f27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armImg: {fileID: 21300000, guid: ab30e8eb7c923f247be5ab85ba62a860, type: 3}
-  chestImg: {fileID: 21300000, guid: 3b89218b1d4b5fe4d8c709bcfd1b30ca, type: 3}
-  legsImg: {fileID: 21300000, guid: f0b444d4bfac29b43aa987ab0d1f672b, type: 3}
-  absImg: {fileID: 21300000, guid: 2b96a75ac388a814e845a1020a87f275, type: 3}
+  armImg: {fileID: 21300000, guid: 19cd0fe6e8484fa49b1156c87d176d06, type: 3}
+  chestImg: {fileID: 21300000, guid: d62406801041d664b8fe7bb054a71cd8, type: 3}
+  legsImg: {fileID: 21300000, guid: 66e16458a1d6ca343a6908984c74d1a2, type: 3}
+  absImg: {fileID: 21300000, guid: d7c73b28ea00aa84e854383be52ba570, type: 3}
   daysParent: {fileID: 867460085}
   dayHolderPrefab: {fileID: 4880833300470171668, guid: 0d148dfb64fd19b4c8e9dd3c099e9ab4, type: 3}
   YEAR_TEXT: {fileID: 1075937079}
