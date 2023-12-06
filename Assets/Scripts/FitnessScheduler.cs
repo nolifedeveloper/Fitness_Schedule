@@ -99,6 +99,7 @@ public class FitnessScheduler : MonoBehaviour
         currentYear += delta;
         YEAR_TEXT.text = currentYear.ToString();
         lastSavedDate.lastYear = currentYear;
+        InitializeMonth();
         SetData(lastSavedDate, settingsDataPath);
     }
 

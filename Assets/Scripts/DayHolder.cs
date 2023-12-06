@@ -19,13 +19,11 @@ public class DayHolder : MonoBehaviour, IPointerClickHandler
         InitializeData();
     }
 
-
     private void InitializeData()
     {
         dayCount.text = data.day.ToString("00");
         dayImage.sprite = FitnessScheduler.instance.ReturnWorkoutSprite(this.data.workoutType);
     }
-
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -60,6 +58,8 @@ public class DayHolder : MonoBehaviour, IPointerClickHandler
         }
 
         dayImage.sprite = FitnessScheduler.instance.ReturnWorkoutSprite(this.data.workoutType);
+
+        if(this.data.workoutType == 0) { return; }
 
         FitnessScheduler.instance.AddWorkoutData(this.data);
     }
