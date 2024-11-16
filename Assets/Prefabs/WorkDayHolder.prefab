@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5909925222695164241}
-  - component: {fileID: 2982456251214287288}
   - component: {fileID: 7554640049002856275}
+  - component: {fileID: 6768517332825471797}
   - component: {fileID: 3519763132631618184}
   m_Layer: 5
-  m_Name: DayHolder
+  m_Name: WorkDayHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,23 +41,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2982456251214287288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4880833300470171668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ec4074757efb9a4ea96e610a462a3e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data:
-    day: 0
-    month: 0
-    year: 0
-    workoutType: 0
 --- !u!222 &7554640049002856275
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -66,6 +49,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4880833300470171668}
   m_CullTransparentMesh: 1
+--- !u!114 &6768517332825471797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4880833300470171668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd23c554ff561149818a7115de0b68e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    day: 0
+    month: 0
+    year: 0
+    workoutType: 0
 --- !u!114 &3519763132631618184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,7 +281,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: -3, y: 0}
-  m_SizeDelta: {x: 57.003, y: 51.6802}
+  m_SizeDelta: {x: 44.2, y: 38.3}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1924810085723024489
 CanvasRenderer:
@@ -313,8 +313,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 01
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1ba4a8fd8258eaf429e3feceb4d2ebf4, type: 2}
-  m_sharedMaterial: {fileID: 5208575876831345093, guid: 1ba4a8fd8258eaf429e3feceb4d2ebf4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d91fe190996719849a39cdf5598fb9d0, type: 2}
+  m_sharedMaterial: {fileID: -1957553463324673716, guid: d91fe190996719849a39cdf5598fb9d0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

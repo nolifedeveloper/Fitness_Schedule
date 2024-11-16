@@ -14,6 +14,7 @@ public class FitnessScheduler : MonoBehaviour
     public Sprite chestImg;
     public Sprite legsImg;
     public Sprite absImg;
+    public Sprite ultimateImg;
 
     [Header("Object References")]
     public GameObject daysParent;
@@ -172,6 +173,8 @@ public class FitnessScheduler : MonoBehaviour
                 return legsImg;
             case WorkoutType.Abs:
                 return absImg;
+            case WorkoutType.Ultimate:
+                return ultimateImg;
             default:
                 return null;
         }
@@ -223,7 +226,8 @@ public enum WorkoutType
     Arms,
     Chest,
     Legs,
-    Abs
+    Abs,
+    Ultimate
 }
 
 [System.Serializable]

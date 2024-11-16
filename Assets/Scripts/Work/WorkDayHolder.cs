@@ -7,12 +7,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DayHolder : MonoBehaviour, IPointerClickHandler
+public class WorkDayHolder : MonoBehaviour, IPointerClickHandler
 {
     [HideInInspector] public Image dayImage => transform.GetChild(0).GetComponent<Image>();
     [HideInInspector] public TextMeshProUGUI dayCount => transform.GetChild(2).GetComponent<TextMeshProUGUI>();
 
-    public WorkoutData data;
+    public WorkData data;
 
     private void Start()
     {
@@ -22,7 +22,7 @@ public class DayHolder : MonoBehaviour, IPointerClickHandler
     private void InitializeData()
     {
         dayCount.text = data.day.ToString("00");
-        dayImage.sprite = FitnessScheduler.instance.ReturnWorkoutSprite(this.data.workoutType);
+        dayImage.sprite = WorkScheduler.instance.ReturnWorkoutSprite(this.data.workoutType);
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -43,30 +43,24 @@ public class DayHolder : MonoBehaviour, IPointerClickHandler
 
     private void ChangeDayStatus(ScrollType type)
     {
-        FitnessScheduler.instance.RemoveWorkoutData(this.data);
+        WorkScheduler.instance.RemoveWorkoutData(this.data);
 
         if (type == ScrollType.Change)
         {
             int workoutType = (int)this.data.workoutType + 1;
-            
-            if(workoutType > 4) { workoutType = 1; }
-            this.data.workoutType = (WorkoutType)workoutType;
+
+            if (workoutType > 4) { workoutType = 1; }
+            this.data.workoutType = (WorkType)workoutType;
         }
         else
         {
-            this.data.workoutType = WorkoutType.None;
+            this.data.workoutType = WorkType.None;
         }
 
-        dayImage.sprite = FitnessScheduler.instance.ReturnWorkoutSprite(this.data.workoutType);
+        dayImage.sprite = WorkScheduler.instance.ReturnWorkoutSprite(this.data.workoutType);
 
-        if(this.data.workoutType == 0) { return; }
+        if (this.data.workoutType == 0) { return; }
 
-        FitnessScheduler.instance.AddWorkoutData(this.data);
+        WorkScheduler.instance.AddWorkoutData(this.data);
     }
-}
-
-public enum ScrollType
-{
-    Change,
-    Empty
 }
